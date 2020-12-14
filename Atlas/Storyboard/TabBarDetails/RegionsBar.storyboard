@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYz-Os-chK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Regions Table View Controller-->
+        <scene sceneID="I9A-p7-Dim">
+            <objects>
+                <tableViewController id="aSk-pC-oRh" customClass="RegionsTableViewController" customModule="Atlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="M7w-ZL-gUU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RegionTableViewCell" textLabel="Tng-kn-9dk" rowHeight="70" style="IBUITableViewCellStyleDefault" id="syH-e8-v3Z" customClass="RegionTableViewCell" customModule="Atlas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syH-e8-v3Z" id="R4T-Dl-pmN">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tng-kn-9dk">
+                                            <rect key="frame" x="20" y="0.0" width="355" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="regionNameLabel" destination="Tng-kn-9dk" id="su4-rQ-Vpx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aSk-pC-oRh" id="PHh-9L-gGm"/>
+                            <outlet property="delegate" destination="aSk-pC-oRh" id="TeG-1f-iE5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="M3S-Cl-jBc"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="Dw7-w2-aIf" kind="show" identifier="Show Countries" id="K61-Ix-Sxw"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7v-83-Ldp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="-845"/>
+        </scene>
+        <!--Countries Table View Controller-->
+        <scene sceneID="Tfy-dw-GWG">
+            <objects>
+                <tableViewController id="Dw7-w2-aIf" customClass="CountriesTableViewController" customModule="Atlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AfI-eV-cLd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Dw7-w2-aIf" id="pio-yA-f0d"/>
+                            <outlet property="delegate" destination="Dw7-w2-aIf" id="EOu-DC-6kQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="LrQ-sE-XI6"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="w9s-TM-a1d" kind="show" identifier="Show Detail" id="EcQ-2q-Hff"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MtC-UL-RUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="-845"/>
+        </scene>
+        <!--Regions-->
+        <scene sceneID="YT3-6X-8KH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PYz-Os-chK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Regions" image="globe" catalog="system" id="yjH-fa-TMO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Pe-YO-geU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aSk-pC-oRh" kind="relationship" relationship="rootViewController" id="Q7u-Pj-EHe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHB-yM-F8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="-845"/>
+        </scene>
+        <!--CountryinfoViewController-->
+        <scene sceneID="Z8m-Oq-MQP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CountryinfoViewController" storyboardName="CountryInfoViewController" referencedIdentifier="CountryinfoViewController" id="w9s-TM-a1d" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V41-pe-1wg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwx-43-gED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3091" y="-845"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

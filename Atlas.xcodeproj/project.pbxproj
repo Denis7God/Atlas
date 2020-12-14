@@ -3,29 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0505DCBE25879B1D001B1C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCBD25879B1D001B1C30 /* AppDelegate.swift */; };
 		0505DCC025879B1D001B1C30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCBF25879B1D001B1C30 /* SceneDelegate.swift */; };
-		0505DCC225879B1D001B1C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCC125879B1D001B1C30 /* ViewController.swift */; };
-		0505DCC525879B1D001B1C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DCC325879B1D001B1C30 /* Main.storyboard */; };
 		0505DCC825879B1D001B1C30 /* Atlas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCC625879B1D001B1C30 /* Atlas.xcdatamodeld */; };
 		0505DCCA25879B1E001B1C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0505DCC925879B1E001B1C30 /* Assets.xcassets */; };
 		0505DCCD25879B1E001B1C30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DCCB25879B1E001B1C30 /* LaunchScreen.storyboard */; };
+		0505DCD725879B6A001B1C30 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0505DCD625879B6A001B1C30 /* data.json */; };
+		0505DCDE25879B86001B1C30 /* CountryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCDA25879B86001B1C30 /* CountryInfoViewController.swift */; };
+		0505DCDF25879B86001B1C30 /* RegionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCDB25879B86001B1C30 /* RegionsTableViewController.swift */; };
+		0505DCE025879B86001B1C30 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCDC25879B86001B1C30 /* CountriesTableViewController.swift */; };
+		0505DCE125879B86001B1C30 /* SearchCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCDD25879B86001B1C30 /* SearchCountryViewController.swift */; };
+		0505DCE825879B97001B1C30 /* CountriesAndFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCE425879B97001B1C30 /* CountriesAndFlags.swift */; };
+		0505DCE925879B97001B1C30 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCE525879B97001B1C30 /* CountryInfo.swift */; };
+		0505DCEA25879B97001B1C30 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCE625879B97001B1C30 /* Country.swift */; };
+		0505DCEB25879B97001B1C30 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCE725879B97001B1C30 /* DataRequest.swift */; };
+		0505DCEE25879BA3001B1C30 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0505DCED25879BA3001B1C30 /* CountryTableViewCell.xib */; };
+		0505DCF325879BAB001B1C30 /* RegionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCF125879BAB001B1C30 /* RegionTableViewCell.swift */; };
+		0505DCF425879BAB001B1C30 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCF225879BAB001B1C30 /* CountryTableViewCell.swift */; };
+		0505DCF725879BB2001B1C30 /* [String].swift in Sources */ = {isa = PBXBuildFile; fileRef = 0505DCF625879BB2001B1C30 /* [String].swift */; };
+		0505DCFB25879BBE001B1C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DCFA25879BBE001B1C30 /* Main.storyboard */; };
+		0505DD102587BCFF001B1C30 /* CountryInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD0F2587BCFF001B1C30 /* CountryInfoViewController.storyboard */; };
+		0505DD132587BD20001B1C30 /* RegionsBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD122587BD20001B1C30 /* RegionsBar.storyboard */; };
+		0505DD162587BD41001B1C30 /* SearchBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD152587BD41001B1C30 /* SearchBar.storyboard */; };
+		0505DD192587BD6C001B1C30 /* FavoritesBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD182587BD6C001B1C30 /* FavoritesBar.storyboard */; };
+		38108A52EC38A1A0BDAA40EB /* Pods_Atlas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC518EC8E2C9EBE0E6CA708E /* Pods_Atlas.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0505DCBA25879B1D001B1C30 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0505DCBD25879B1D001B1C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0505DCBF25879B1D001B1C30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0505DCC125879B1D001B1C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0505DCC425879B1D001B1C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0505DCC725879B1D001B1C30 /* Atlas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Atlas.xcdatamodel; sourceTree = "<group>"; };
 		0505DCC925879B1E001B1C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0505DCCC25879B1E001B1C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0505DCCE25879B1E001B1C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0505DCD625879B6A001B1C30 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		0505DCDA25879B86001B1C30 /* CountryInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInfoViewController.swift; sourceTree = "<group>"; };
+		0505DCDB25879B86001B1C30 /* RegionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionsTableViewController.swift; sourceTree = "<group>"; };
+		0505DCDC25879B86001B1C30 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
+		0505DCDD25879B86001B1C30 /* SearchCountryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCountryViewController.swift; sourceTree = "<group>"; };
+		0505DCE425879B97001B1C30 /* CountriesAndFlags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAndFlags.swift; sourceTree = "<group>"; };
+		0505DCE525879B97001B1C30 /* CountryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
+		0505DCE625879B97001B1C30 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		0505DCE725879B97001B1C30 /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		0505DCED25879BA3001B1C30 /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
+		0505DCF125879BAB001B1C30 /* RegionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionTableViewCell.swift; sourceTree = "<group>"; };
+		0505DCF225879BAB001B1C30 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		0505DCF625879BB2001B1C30 /* [String].swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "[String].swift"; sourceTree = "<group>"; };
+		0505DCFA25879BBE001B1C30 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0505DD0F2587BCFF001B1C30 /* CountryInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CountryInfoViewController.storyboard; sourceTree = "<group>"; };
+		0505DD122587BD20001B1C30 /* RegionsBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegionsBar.storyboard; sourceTree = "<group>"; };
+		0505DD152587BD41001B1C30 /* SearchBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchBar.storyboard; sourceTree = "<group>"; };
+		0505DD182587BD6C001B1C30 /* FavoritesBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoritesBar.storyboard; sourceTree = "<group>"; };
+		1F657C443FD641BF3ED74806 /* Pods-Atlas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas.release.xcconfig"; path = "Target Support Files/Pods-Atlas/Pods-Atlas.release.xcconfig"; sourceTree = "<group>"; };
+		72D8DEBCD08909597D7AFF7D /* Pods-Atlas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas.debug.xcconfig"; path = "Target Support Files/Pods-Atlas/Pods-Atlas.debug.xcconfig"; sourceTree = "<group>"; };
+		DC518EC8E2C9EBE0E6CA708E /* Pods_Atlas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atlas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38108A52EC38A1A0BDAA40EB /* Pods_Atlas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +81,8 @@
 			children = (
 				0505DCBC25879B1D001B1C30 /* Atlas */,
 				0505DCBB25879B1D001B1C30 /* Products */,
+				66AF48E803C75A04D1C51C77 /* Pods */,
+				A28C823345CFB6505D04F3EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +97,145 @@
 		0505DCBC25879B1D001B1C30 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
-				0505DCBD25879B1D001B1C30 /* AppDelegate.swift */,
-				0505DCBF25879B1D001B1C30 /* SceneDelegate.swift */,
-				0505DCC125879B1D001B1C30 /* ViewController.swift */,
-				0505DCC325879B1D001B1C30 /* Main.storyboard */,
+				0505DCFD25879C11001B1C30 /* Storyboard */,
+				0505DCE325879B97001B1C30 /* Model */,
+				0505DCF025879BAB001B1C30 /* View */,
+				0505DCD925879B86001B1C30 /* Controller */,
+				0505DCFE25879C20001B1C30 /* Delegates */,
+				0505DD0025879C32001B1C30 /* Extensions */,
+				0505DD0B25879E21001B1C30 /* Data */,
 				0505DCC925879B1E001B1C30 /* Assets.xcassets */,
-				0505DCCB25879B1E001B1C30 /* LaunchScreen.storyboard */,
 				0505DCCE25879B1E001B1C30 /* Info.plist */,
-				0505DCC625879B1D001B1C30 /* Atlas.xcdatamodeld */,
 			);
 			path = Atlas;
+			sourceTree = "<group>";
+		};
+		0505DCD925879B86001B1C30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCDA25879B86001B1C30 /* CountryInfoViewController.swift */,
+				0505DCDB25879B86001B1C30 /* RegionsTableViewController.swift */,
+				0505DCDC25879B86001B1C30 /* CountriesTableViewController.swift */,
+				0505DCDD25879B86001B1C30 /* SearchCountryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0505DCE325879B97001B1C30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCE625879B97001B1C30 /* Country.swift */,
+				0505DCE525879B97001B1C30 /* CountryInfo.swift */,
+				0505DCE725879B97001B1C30 /* DataRequest.swift */,
+				0505DCE425879B97001B1C30 /* CountriesAndFlags.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0505DCF025879BAB001B1C30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCF125879BAB001B1C30 /* RegionTableViewCell.swift */,
+				0505DCF225879BAB001B1C30 /* CountryTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0505DCFD25879C11001B1C30 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0505DD1E2587C0D7001B1C30 /* Main */,
+				0505DD202587C12E001B1C30 /* TabBarDetails */,
+				0505DD212587C143001B1C30 /* Common */,
+				0505DD1B2587BEB0001B1C30 /* LaunchScreen */,
+				0505DD0225879C75001B1C30 /* xib */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0505DCFE25879C20001B1C30 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCBD25879B1D001B1C30 /* AppDelegate.swift */,
+				0505DCBF25879B1D001B1C30 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0505DD0025879C32001B1C30 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCF625879BB2001B1C30 /* [String].swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0505DD0225879C75001B1C30 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCED25879BA3001B1C30 /* CountryTableViewCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		0505DD0B25879E21001B1C30 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCC625879B1D001B1C30 /* Atlas.xcdatamodeld */,
+				0505DCD625879B6A001B1C30 /* data.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0505DD1B2587BEB0001B1C30 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCCB25879B1E001B1C30 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		0505DD1E2587C0D7001B1C30 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0505DCFA25879BBE001B1C30 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0505DD202587C12E001B1C30 /* TabBarDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0505DD122587BD20001B1C30 /* RegionsBar.storyboard */,
+				0505DD152587BD41001B1C30 /* SearchBar.storyboard */,
+				0505DD182587BD6C001B1C30 /* FavoritesBar.storyboard */,
+			);
+			path = TabBarDetails;
+			sourceTree = "<group>";
+		};
+		0505DD212587C143001B1C30 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0505DD0F2587BCFF001B1C30 /* CountryInfoViewController.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		66AF48E803C75A04D1C51C77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72D8DEBCD08909597D7AFF7D /* Pods-Atlas.debug.xcconfig */,
+				1F657C443FD641BF3ED74806 /* Pods-Atlas.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A28C823345CFB6505D04F3EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC518EC8E2C9EBE0E6CA708E /* Pods_Atlas.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0505DCD125879B1E001B1C30 /* Build configuration list for PBXNativeTarget "Atlas" */;
 			buildPhases = (
+				6B02B57339CD93350BE301B2 /* [CP] Check Pods Manifest.lock */,
 				0505DCB625879B1D001B1C30 /* Sources */,
 				0505DCB725879B1D001B1C30 /* Frameworks */,
 				0505DCB825879B1D001B1C30 /* Resources */,
+				59E1818C2B66B9BE2F4C60F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,37 +297,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0505DCEE25879BA3001B1C30 /* CountryTableViewCell.xib in Resources */,
+				0505DD132587BD20001B1C30 /* RegionsBar.storyboard in Resources */,
+				0505DD192587BD6C001B1C30 /* FavoritesBar.storyboard in Resources */,
+				0505DCFB25879BBE001B1C30 /* Main.storyboard in Resources */,
+				0505DD102587BCFF001B1C30 /* CountryInfoViewController.storyboard in Resources */,
 				0505DCCD25879B1E001B1C30 /* LaunchScreen.storyboard in Resources */,
+				0505DCD725879B6A001B1C30 /* data.json in Resources */,
+				0505DD162587BD41001B1C30 /* SearchBar.storyboard in Resources */,
 				0505DCCA25879B1E001B1C30 /* Assets.xcassets in Resources */,
-				0505DCC525879B1D001B1C30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59E1818C2B66B9BE2F4C60F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Atlas/Pods-Atlas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Atlas/Pods-Atlas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Atlas/Pods-Atlas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B02B57339CD93350BE301B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Atlas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0505DCB625879B1D001B1C30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0505DCC225879B1D001B1C30 /* ViewController.swift in Sources */,
 				0505DCBE25879B1D001B1C30 /* AppDelegate.swift in Sources */,
 				0505DCC025879B1D001B1C30 /* SceneDelegate.swift in Sources */,
+				0505DCEB25879B97001B1C30 /* DataRequest.swift in Sources */,
+				0505DCDE25879B86001B1C30 /* CountryInfoViewController.swift in Sources */,
+				0505DCF725879BB2001B1C30 /* [String].swift in Sources */,
+				0505DCDF25879B86001B1C30 /* RegionsTableViewController.swift in Sources */,
+				0505DCE025879B86001B1C30 /* CountriesTableViewController.swift in Sources */,
+				0505DCF325879BAB001B1C30 /* RegionTableViewCell.swift in Sources */,
 				0505DCC825879B1D001B1C30 /* Atlas.xcdatamodeld in Sources */,
+				0505DCEA25879B97001B1C30 /* Country.swift in Sources */,
+				0505DCE125879B86001B1C30 /* SearchCountryViewController.swift in Sources */,
+				0505DCE925879B97001B1C30 /* CountryInfo.swift in Sources */,
+				0505DCF425879BAB001B1C30 /* CountryTableViewCell.swift in Sources */,
+				0505DCE825879B97001B1C30 /* CountriesAndFlags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0505DCC325879B1D001B1C30 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0505DCC425879B1D001B1C30 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0505DCCB25879B1E001B1C30 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +507,7 @@
 		};
 		0505DCD225879B1E001B1C30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72D8DEBCD08909597D7AFF7D /* Pods-Atlas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +527,7 @@
 		};
 		0505DCD325879B1E001B1C30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F657C443FD641BF3ED74806 /* Pods-Atlas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

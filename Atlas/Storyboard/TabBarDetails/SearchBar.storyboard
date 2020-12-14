@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AyP-5F-dQo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Country View Controller-->
+        <scene sceneID="eaM-NO-GZe">
+            <objects>
+                <viewController id="c62-pv-apE" customClass="SearchCountryViewController" customModule="Atlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bd3-MM-B8d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B01-Qg-1cm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gIr-lG-b2Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gIr-lG-b2Y" firstAttribute="trailing" secondItem="B01-Qg-1cm" secondAttribute="trailing" id="1dR-9Y-jqk"/>
+                            <constraint firstItem="gIr-lG-b2Y" firstAttribute="bottom" secondItem="B01-Qg-1cm" secondAttribute="bottom" id="Wdp-yS-l7r"/>
+                            <constraint firstItem="B01-Qg-1cm" firstAttribute="leading" secondItem="gIr-lG-b2Y" secondAttribute="leading" id="lZN-OT-cus"/>
+                            <constraint firstItem="B01-Qg-1cm" firstAttribute="top" secondItem="gIr-lG-b2Y" secondAttribute="top" id="llR-px-baS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6QW-QG-B7t"/>
+                    <connections>
+                        <outlet property="searchBar" destination="0hL-K1-iVL" id="bVz-JY-2im"/>
+                        <outlet property="tableView" destination="B01-Qg-1cm" id="x3Q-NW-QQV"/>
+                        <segue destination="w9s-TM-a1d" kind="show" identifier="Show Detail" id="n4c-GH-r3a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNC-PA-KdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" text="" placeholder="Search by Country Name" id="0hL-K1-iVL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </objects>
+            <point key="canvasLocation" x="1409" y="-130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yv3-ff-NrL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AyP-5F-dQo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="cbQ-rM-Ebe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TGD-Pc-smi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c62-pv-apE" kind="relationship" relationship="rootViewController" id="eUL-Zs-Pw2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIS-Ak-nK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="-130"/>
+        </scene>
+        <!--CountryinfoViewController-->
+        <scene sceneID="Z8m-Oq-MQP">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CountryinfoViewController" storyboardName="CountryInfoViewController" referencedIdentifier="CountryinfoViewController" id="w9s-TM-a1d" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V41-pe-1wg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwx-43-gED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="-131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
