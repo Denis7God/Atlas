@@ -43,7 +43,7 @@ struct DataRequest {
                 completion(.failure(error))
             case .success(let json as [[String : String]]):
                 for countryJSON in json {
-                    if let country = Country(json: countryJSON) {
+                    if let country = CountryModel(json: countryJSON) {
                         countries.append(country)
                         if countries.count == json.count {
                             completion(.success(countries))
@@ -66,7 +66,7 @@ struct DataRequest {
                 case .failure(let error):
                     completion(.failure(error))
                 case .success(let json as [String : String]):
-                    if let country = Country(json: json) {
+                    if let country = CountryModel(json: json) {
                         countries.append(country)
                         if countries.count == codes.count {
                             completion(.success(countries))
@@ -89,7 +89,7 @@ struct DataRequest {
                 completion(.failure(error))
             case .success(let json as [[String : String]]):
                 for countryJSON in json {
-                    if let country = Country(json: countryJSON) {
+                    if let country = CountryModel(json: countryJSON) {
                         countries.append(country)
                         if countries.count == json.count {
                             completion(.success(countries))
