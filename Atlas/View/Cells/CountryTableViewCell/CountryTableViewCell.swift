@@ -9,7 +9,7 @@ import UIKit
 
 class CountryTableViewCell: UITableViewCell {
 
-    var country: CountryModel? {
+    var country: Country? {
         didSet {
             self.configure()
         }

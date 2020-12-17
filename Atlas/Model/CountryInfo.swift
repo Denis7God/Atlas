@@ -15,7 +15,8 @@ struct CountryInfo {
     let borders: [String]
     let latitude: Float
     let longitude: Float
-
+    
+    // initializing with network request
     init? (json: [String : Any]) {
         guard let capital = json["capital"] as? String,
               let currenciesJSON = json["currencies"] as? [[String : String]],

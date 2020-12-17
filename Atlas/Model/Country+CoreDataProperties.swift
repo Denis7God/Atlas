@@ -13,13 +13,13 @@ import CoreData
 extension Country {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Country> {
-        return NSFetchRequest<Country>(entityName: "Country")
+        return NSFetchRequest<Country>(entityName: String(describing: Country.self))
     }
 
-    @NSManaged public var alpha3Code: String?
-    @NSManaged public var emoji: String?
-    @NSManaged public var name: String?
-    @NSManaged public var nativeName: String?
+    @NSManaged public var alpha3Code: String
+    @NSManaged public var emoji: String
+    @NSManaged public var name: String
+    @NSManaged public var nativeName: String
 
 }
 

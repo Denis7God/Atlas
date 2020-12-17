@@ -29,7 +29,6 @@
 		0505DD132587BD20001B1C30 /* RegionsBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD122587BD20001B1C30 /* RegionsBar.storyboard */; };
 		0505DD162587BD41001B1C30 /* SearchBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD152587BD41001B1C30 /* SearchBar.storyboard */; };
 		0505DD192587BD6C001B1C30 /* FavoritesBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD182587BD6C001B1C30 /* FavoritesBar.storyboard */; };
-		056BF125258B5AA000DC58AC /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056BF124258B5AA000DC58AC /* CountryModel.swift */; };
 		056BF12C258B5CE800DC58AC /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056BF12A258B5CE800DC58AC /* Country+CoreDataClass.swift */; };
 		056BF12D258B5CE800DC58AC /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056BF12B258B5CE800DC58AC /* Country+CoreDataProperties.swift */; };
 		05D1CDAA258A247B00E2E8B4 /* MainManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1CDA9258A247B00E2E8B4 /* MainManagedObjectContext.swift */; };
@@ -62,7 +61,6 @@
 		0505DD122587BD20001B1C30 /* RegionsBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegionsBar.storyboard; sourceTree = "<group>"; };
 		0505DD152587BD41001B1C30 /* SearchBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchBar.storyboard; sourceTree = "<group>"; };
 		0505DD182587BD6C001B1C30 /* FavoritesBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoritesBar.storyboard; sourceTree = "<group>"; };
-		056BF124258B5AA000DC58AC /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		056BF12A258B5CE800DC58AC /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
 		056BF12B258B5CE800DC58AC /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		05D1CDA9258A247B00E2E8B4 /* MainManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainManagedObjectContext.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			children = (
 				056BF12A258B5CE800DC58AC /* Country+CoreDataClass.swift */,
 				056BF12B258B5CE800DC58AC /* Country+CoreDataProperties.swift */,
-				056BF124258B5AA000DC58AC /* CountryModel.swift */,
 				0505DCE525879B97001B1C30 /* CountryInfo.swift */,
 				05D1CDA9258A247B00E2E8B4 /* MainManagedObjectContext.swift */,
 				0505DCE725879B97001B1C30 /* DataRequest.swift */,
@@ -388,7 +385,6 @@
 			files = (
 				0505DCBE25879B1D001B1C30 /* AppDelegate.swift in Sources */,
 				0505DCC025879B1D001B1C30 /* SceneDelegate.swift in Sources */,
-				056BF125258B5AA000DC58AC /* CountryModel.swift in Sources */,
 				0505DCEB25879B97001B1C30 /* DataRequest.swift in Sources */,
 				05D1CDAE258A300900E2E8B4 /* FavoritesTableViewController.swift in Sources */,
 				0505DCDE25879B86001B1C30 /* CountryInfoViewController.swift in Sources */,

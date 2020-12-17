@@ -30,6 +30,7 @@ class RegionsTableViewController: UITableViewController {
         }
     }
     
+    // hiding navigationBar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
