@@ -29,8 +29,9 @@
 		0505DD132587BD20001B1C30 /* RegionsBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD122587BD20001B1C30 /* RegionsBar.storyboard */; };
 		0505DD162587BD41001B1C30 /* SearchBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD152587BD41001B1C30 /* SearchBar.storyboard */; };
 		0505DD192587BD6C001B1C30 /* FavoritesBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0505DD182587BD6C001B1C30 /* FavoritesBar.storyboard */; };
-		056BF12C258B5CE800DC58AC /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056BF12A258B5CE800DC58AC /* Country+CoreDataClass.swift */; };
-		056BF12D258B5CE800DC58AC /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056BF12B258B5CE800DC58AC /* Country+CoreDataProperties.swift */; };
+		0579C3C72590EAA90006C499 /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579C3C52590EAA90006C499 /* Country+CoreDataClass.swift */; };
+		0579C3C82590EAA90006C499 /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579C3C62590EAA90006C499 /* Country+CoreDataProperties.swift */; };
+		0579C3CF25910B880006C499 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0579C3CE25910B880006C499 /* Reachability.swift */; };
 		05D1CDAA258A247B00E2E8B4 /* MainManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1CDA9258A247B00E2E8B4 /* MainManagedObjectContext.swift */; };
 		05D1CDAE258A300900E2E8B4 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1CDAD258A300900E2E8B4 /* FavoritesTableViewController.swift */; };
 		38108A52EC38A1A0BDAA40EB /* Pods_Atlas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC518EC8E2C9EBE0E6CA708E /* Pods_Atlas.framework */; };
@@ -61,8 +62,9 @@
 		0505DD122587BD20001B1C30 /* RegionsBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegionsBar.storyboard; sourceTree = "<group>"; };
 		0505DD152587BD41001B1C30 /* SearchBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchBar.storyboard; sourceTree = "<group>"; };
 		0505DD182587BD6C001B1C30 /* FavoritesBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoritesBar.storyboard; sourceTree = "<group>"; };
-		056BF12A258B5CE800DC58AC /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
-		056BF12B258B5CE800DC58AC /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0579C3C52590EAA90006C499 /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0579C3C62590EAA90006C499 /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0579C3CE25910B880006C499 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		05D1CDA9258A247B00E2E8B4 /* MainManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainManagedObjectContext.swift; sourceTree = "<group>"; };
 		05D1CDAD258A300900E2E8B4 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		1F657C443FD641BF3ED74806 /* Pods-Atlas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atlas.release.xcconfig"; path = "Target Support Files/Pods-Atlas/Pods-Atlas.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				0505DCE325879B97001B1C30 /* Model */,
 				0505DCF025879BAB001B1C30 /* View */,
 				0505DCD925879B86001B1C30 /* Controller */,
+				0579C3CD25910B570006C499 /* Reachability */,
 				0505DCFE25879C20001B1C30 /* Delegates */,
 				0505DD0025879C32001B1C30 /* Extensions */,
 				0505DD0B25879E21001B1C30 /* Data */,
@@ -131,8 +134,8 @@
 		0505DCE325879B97001B1C30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				056BF12A258B5CE800DC58AC /* Country+CoreDataClass.swift */,
-				056BF12B258B5CE800DC58AC /* Country+CoreDataProperties.swift */,
+				0579C3C52590EAA90006C499 /* Country+CoreDataClass.swift */,
+				0579C3C62590EAA90006C499 /* Country+CoreDataProperties.swift */,
 				0505DCE525879B97001B1C30 /* CountryInfo.swift */,
 				05D1CDA9258A247B00E2E8B4 /* MainManagedObjectContext.swift */,
 				0505DCE725879B97001B1C30 /* DataRequest.swift */,
@@ -218,6 +221,14 @@
 				0505DD0F2587BCFF001B1C30 /* CountryInfoViewController.storyboard */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		0579C3CD25910B570006C499 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				0579C3CE25910B880006C499 /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		05D1CDA3258A181900E2E8B4 /* Cells */ = {
@@ -388,17 +399,18 @@
 				0505DCEB25879B97001B1C30 /* DataRequest.swift in Sources */,
 				05D1CDAE258A300900E2E8B4 /* FavoritesTableViewController.swift in Sources */,
 				0505DCDE25879B86001B1C30 /* CountryInfoViewController.swift in Sources */,
-				056BF12C258B5CE800DC58AC /* Country+CoreDataClass.swift in Sources */,
 				0505DCF725879BB2001B1C30 /* [String].swift in Sources */,
-				056BF12D258B5CE800DC58AC /* Country+CoreDataProperties.swift in Sources */,
 				0505DCDF25879B86001B1C30 /* RegionsTableViewController.swift in Sources */,
 				0505DCE025879B86001B1C30 /* CountriesTableViewController.swift in Sources */,
 				0505DCF325879BAB001B1C30 /* RegionTableViewCell.swift in Sources */,
+				0579C3C82590EAA90006C499 /* Country+CoreDataProperties.swift in Sources */,
 				0505DCC825879B1D001B1C30 /* Atlas.xcdatamodeld in Sources */,
 				0505DCE125879B86001B1C30 /* SearchCountryViewController.swift in Sources */,
 				05D1CDAA258A247B00E2E8B4 /* MainManagedObjectContext.swift in Sources */,
 				0505DCE925879B97001B1C30 /* CountryInfo.swift in Sources */,
+				0579C3CF25910B880006C499 /* Reachability.swift in Sources */,
 				0505DCF425879BAB001B1C30 /* CountryTableViewCell.swift in Sources */,
+				0579C3C72590EAA90006C499 /* Country+CoreDataClass.swift in Sources */,
 				0505DCE825879B97001B1C30 /* CountriesAndFlags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

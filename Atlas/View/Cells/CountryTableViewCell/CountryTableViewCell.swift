@@ -22,6 +22,6 @@ class CountryTableViewCell: UITableViewCell {
     private func configure() {
         nameLabel.text = country?.name
         nativeNameLabel.text = country?.nativeName
-        flagEmojiLabel.text = country?.emoji
+        flagEmojiLabel.text = country?.flagEmoji
     }
 }

@@ -11,8 +11,8 @@ import CoreData
 
 class CountryInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var country: Country!
-    var countryInfo: CountryInfo!
+    var country: Country?
+    var countryInfo: CountryInfo?
     var neighbors = Countries()
     
     var countryIsFavorite = false {
@@ -42,16 +42,26 @@ class CountryInfoViewController: UIViewController, UITableViewDelegate, UITableV
         if countryIsFavorite {
             // delete from DB
             let request = NSFetchRequest<Country>(entityName: String(describing: Country.self))
-            request.predicate = NSPredicate(format: "name == %@", country.name)
-            let matchedCountries = try? context.fetch(request)
-            if matchedCountries?.count != 0, let country = matchedCountries?[0] {
-                context.delete(country)
-                try? context.save()
+            request.predicate = NSPredicate(format: "name == %@", country!.name)
+            do {
+                let matchedCountries = try context.fetch(request)
+                if matchedCountries.count != 0 {
+                    context.delete(matchedCountries[0])
+                    try context.save()
+                }
+            }
+            catch {
+                assertionFailure("An error '\(error)' occurred while removing object from database")
             }
         } else {
             // add to DB
-            context.insert(self.country)
-            try? context.save()
+            if let country = self.country {
+                context.insert(country)
+                do { try context.save() }
+                catch {
+                    assertionFailure("An error '\(error)' occurred while inserting object into database")
+                }
+            }
         }
         countryIsFavorite = !countryIsFavorite
     }
@@ -64,19 +74,19 @@ class CountryInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
         neighboringCountriesTableView.register(UINib(nibName: String(describing: CountryTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CountryTableViewCell.self))
         
-        navigationItem.title = country.name
+        navigationItem.title = country?.name
         
         // checking in database if country is already favorite
         let context = MainManagedObjectContext.shared
         let request = NSFetchRequest<Country>(entityName: String(describing: Country.self))
-        request.predicate = NSPredicate(format: "name == %@", country.name)
+        request.predicate = NSPredicate(format: "name == %@", country!.name)
         let matchedCountries = try? context.fetch(request)
         if let matchedCountries = matchedCountries, !matchedCountries.isEmpty {
             countryIsFavorite = true
         }
         
         // get countryInfo for chosen country
-        DataRequest.fetchCountryInfo(forCountryCode: country.alpha3Code) { result in
+        DataRequest.fetchCountryInfo(forCountryCode: country!.code) { result in
             switch result {
             case .success(let countryInfo):
                 self.countryInfo = countryInfo
@@ -99,24 +109,24 @@ class CountryInfoViewController: UIViewController, UITableViewDelegate, UITableV
     private func configure() {
         
         // if country doesn't have country, hide capitalStackView
-        if self.countryInfo.capital == "" {
+        if self.countryInfo?.capital == "" {
             capitalStackView.isHidden = true
         } else {
             self.capitalLabel.text = countryInfo?.capital
         }
         
         // if country has no distinct land borders, hide neighboringCountriesTableView and show
-        if self.countryInfo.borders.count == 0 {
+        if self.countryInfo?.borders.count == 0 {
             self.noBordersLabel.isHidden = false
             self.boardsWithLabel.isHidden = true
             self.neighboringCountriesTableView.isHidden = true
         }
         
         // update views with countryInfo
-        self.flagLabel.text = country.emoji
-        self.currenciesLabel.text = countryInfo.currencies.joined(separator: ", ")
-        self.languagesLabel.text = countryInfo.languages.joined(separator: ", ")
-        let center = CLLocationCoordinate2D(latitude: CLLocationDegrees(countryInfo.latitude), longitude: CLLocationDegrees(countryInfo.longitude))
+        self.flagLabel.text = country?.flagEmoji
+        self.currenciesLabel.text = countryInfo?.currencies.joined(separator: ", ")
+        self.languagesLabel.text = countryInfo?.languages.joined(separator: ", ")
+        let center = CLLocationCoordinate2D(latitude: CLLocationDegrees(countryInfo!.latitude), longitude: CLLocationDegrees(countryInfo!.longitude))
         mapView.setCenter(center, animated: true)
         let annotation = MKPointAnnotation()
         annotation.coordinate = center

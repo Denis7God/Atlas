@@ -15,6 +15,7 @@ class RegionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // when scene is launched, start fetching CountriesAndFlags data from data.json
         DispatchQueue.global(qos: .utility).async {
             CountriesAndFlags.fetchJSONData()
         }
@@ -30,18 +31,47 @@ class RegionsTableViewController: UITableViewController {
         }
     }
     
-    // hiding navigationBar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // hiding the navigationBar for this scene
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        // start observing for network reachability
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: Reachability.shared)
+        do{
+            try Reachability.shared.startNotifier()
+        }catch{
+            print("could not start reachability notifier")
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        // throwing back the navigationBar while moving forward in NavigationController
         navigationController?.setNavigationBarHidden(false, animated: animated)
-
+        
+        // stop following notifications
+        Reachability.shared.stopNotifier()
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: Reachability.shared)
+    }
+    
+    // MARK: - Network reachability check
+    
+    // show alert if network state has changed and throw alert if connection is unavailable
+    @objc func reachabilityChanged(note: Notification) {
+        
+        let reachability = note.object as! Reachability
+        
+        switch reachability.connection {
+        case .unavailable:
+            let alert = UIAlertController(title: "Atlas App could not connect to the server.", message: "\nMake sure your network connection is active.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default))
+            self.present(alert, animated: true)
+        default:
+            break
+        }
     }
 
     // MARK: - Table view data source

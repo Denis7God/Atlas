@@ -20,7 +20,11 @@ class FavoritesTableViewController: UITableViewController, NSFetchedResultsContr
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        try? fetchedResultsController.performFetch()
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            assertionFailure("An error '\(error)' occurred while fetching data from database")
+        }
         
         tableView.register(UINib(nibName: String(describing: CountryTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CountryTableViewCell.self))
         
