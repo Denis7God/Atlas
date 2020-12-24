@@ -20,7 +20,11 @@ class FavoritesTableViewController: UITableViewController, NSFetchedResultsContr
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        try? fetchedResultsController.performFetch()
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            assertionFailure("An error '\(error)' occurred while fetching data from database")
+        }
         
         tableView.register(UINib(nibName: String(describing: CountryTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: CountryTableViewCell.self))
         
@@ -39,7 +43,7 @@ class FavoritesTableViewController: UITableViewController, NSFetchedResultsContr
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CountryTableViewCell.self), for: indexPath) as! CountryTableViewCell
-        cell.country = CountryModel(country: fetchedResultsController.object(at: indexPath))
+        cell.country = fetchedResultsController.object(at: indexPath)
         return cell
     }
     
@@ -51,7 +55,7 @@ class FavoritesTableViewController: UITableViewController, NSFetchedResultsContr
         if segue.identifier == "Show Detail" {
             let destinationVC = segue.destination as! CountryInfoViewController
             if let indexPathForSelectedCountry = tableView.indexPathForSelectedRow {
-                destinationVC.country = CountryModel(country: fetchedResultsController.object(at: indexPathForSelectedCountry))
+                destinationVC.country = fetchedResultsController.object(at: indexPathForSelectedCountry)
             }
         }
     }

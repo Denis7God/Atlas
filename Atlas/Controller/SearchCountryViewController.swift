@@ -62,7 +62,7 @@ class SearchCountryViewController: UIViewController, UITableViewDelegate, UITabl
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         countriesList.removeAll()
-        DataRequest.fetchCountries(forName: searchText) { result in
+        DataRequest.fetchCountries(forSearchName: searchText) { result in
             switch result {
             case .success(let countries):
                 self.countriesList = countries

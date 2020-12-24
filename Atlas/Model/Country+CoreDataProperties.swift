@@ -2,7 +2,7 @@
 //  Country+CoreDataProperties.swift
 //  Atlas
 //
-//  Created by Denis Godovaniuk on 17.12.2020.
+//  Created by Denis Godovaniuk on 21.12.2020.
 //
 //
 
@@ -16,10 +16,10 @@ extension Country {
         return NSFetchRequest<Country>(entityName: "Country")
     }
 
-    @NSManaged public var alpha3Code: String?
-    @NSManaged public var emoji: String?
-    @NSManaged public var name: String?
-    @NSManaged public var nativeName: String?
+    @NSManaged public var code: String
+    @NSManaged public var flagEmoji: String
+    @NSManaged public var name: String
+    @NSManaged public var nativeName: String
 
 }
 

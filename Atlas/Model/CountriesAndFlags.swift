@@ -9,6 +9,7 @@ import Foundation
 
 struct CountriesAndFlags {
     
+    // resulting dictionary
     private static var dictionary = [String : String]()
     
     static func flagForCountryCode(_ code: String) -> String? {

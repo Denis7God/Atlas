@@ -43,7 +43,7 @@ struct DataRequest {
                 completion(.failure(error))
             case .success(let json as [[String : String]]):
                 for countryJSON in json {
-                    if let country = CountryModel(json: countryJSON) {
+                    if let country = Country(json: countryJSON, context: nil) {
                         countries.append(country)
                         if countries.count == json.count {
                             completion(.success(countries))
@@ -58,7 +58,7 @@ struct DataRequest {
         }
     }
     
-    static func fetchCountries (forCodes codes: [String], completion: @escaping(Result<Countries, AFError>) -> Void) {
+    static func fetchCountries (forCountryCodes codes: [String], completion: @escaping(Result<Countries, AFError>) -> Void) {
         var countries = Countries()
         for code in codes {
             AF.request(requestBody + codeSubdirectory + code + countriesRequestParams).responseJSON { response in
@@ -66,7 +66,7 @@ struct DataRequest {
                 case .failure(let error):
                     completion(.failure(error))
                 case .success(let json as [String : String]):
-                    if let country = CountryModel(json: json) {
+                    if let country = Country(json: json, context: nil) {
                         countries.append(country)
                         if countries.count == codes.count {
                             completion(.success(countries))
@@ -81,7 +81,7 @@ struct DataRequest {
         }
     }
     
-    static func fetchCountries (forName name: String, completion: @escaping(Result<Countries, AFError>) -> Void) {
+    static func fetchCountries (forSearchName name: String, completion: @escaping(Result<Countries, AFError>) -> Void) {
         var countries = Countries()
         AF.request(requestBody + nameSubdirectory + name.lowercased() + countriesRequestParams).responseJSON { response in
             switch response.result {
@@ -89,7 +89,7 @@ struct DataRequest {
                 completion(.failure(error))
             case .success(let json as [[String : String]]):
                 for countryJSON in json {
-                    if let country = CountryModel(json: countryJSON) {
+                    if let country = Country(json: countryJSON, context: nil) {
                         countries.append(country)
                         if countries.count == json.count {
                             completion(.success(countries))
